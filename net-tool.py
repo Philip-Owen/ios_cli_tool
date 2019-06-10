@@ -15,7 +15,7 @@ def connect(device_ip, username, cmd):
     output += f'Command: {cmd}\n\n'
     output += conn.send_command(cmd)
     output += '\n\n*********************************************************************************************\n\n'
-    
+    conn.disconnect()
     return output
 
 def review_args(h, u, c):
